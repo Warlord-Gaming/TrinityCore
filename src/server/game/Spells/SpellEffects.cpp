@@ -2117,7 +2117,20 @@ void Spell::EffectTriggerSpell(SpellEffIndex effIndex)
     {
         // special cases
         switch (triggered_spell_id)
-        {
+
+{    	{
+/ special caseswitch (triggered_spell_id)
+
+{ //Warlord-Gaming FIX
+
+// Mirror Image
+case 58832:
+{
+// Glyph of Mirror Image
+if (m_caster->HasAura(63093))
+m_caster->CastSpell(m_caster, 65047, true); // Mirror Image +
+break;
+}
             // Vanish (not exist)
             case 18461:
             {
